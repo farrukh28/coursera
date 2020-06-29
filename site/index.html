@@ -6,11 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Site</title>
+
+    <style>
+        * {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 5px;
+        }
+
+        div::selection {
+            color: blue;
+            background-color: red;
+        }
+
+        p:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-color: black;
+        }
+
+        p::first-letter {
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+
 </head>
 
 <body>
     <h1>This is my Repository. This is great to learn and fun. :))</h1>
-    <p onclick="alert('Emailing us is Good!')">Support: farrukhahmad62@gmail.com</p>
+
+    <p style="text-align: center;" onclick="alert('Emailing us is Good!')">Support: farrukhahmad62@gmail.com</p><br>
+
+    <div>******DIV 1******</div>
+    <div>******DIV 2******</div>
+    <span>*****SPAN 1******</span>
+    <div>******DIV 3****** <span>******SPAN 2******</span>---Continue Content of DIV 3</div>
 </body>
 
 </html>
