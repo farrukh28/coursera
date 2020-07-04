@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+
+        li a:hover {
+            transition: 0.6s;
+            color: white;
+            background-color: black;
+        }
+
+        li a:active {
+            color: red;
+        }
+
+        section table tr:nth-child(odd) {
+            background-color: rgb(187, 187, 187);
+        }
+
+        section table tr:nth-child(4) {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Menu Links</h2>
+    <ul>
+        <li><a href="#">Google</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Twitter</a></li>
+    </ul>
+
+    <h2>Table</h2>
+    <section>
+        <table align="center" width="80%" border="1">
+            <tr>
+                <td>Google</td>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+            </tr>
+            <tr>
+                <td>Youtube</td>
+            </tr>
+            <tr>
+                <td>Twitter</td>
+            </tr>
+            <tr>
+                <td>Instagram</td>
+            </tr>
+            <tr>
+                <td>Pexels</td>
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>
