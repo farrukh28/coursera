@@ -7,6 +7,7 @@ body {
 #navbar {
     background-color: #929292;
     padding: 0;
+    transition: 0.4s;
 }
 
 #navbar-header {

@@ -1,0 +1,16 @@
+#grid>div>div {
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+#card>div {
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+}
