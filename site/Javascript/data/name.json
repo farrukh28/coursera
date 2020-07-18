@@ -1,0 +1,22 @@
+{
+    "data": [{
+            "fname": "Farhan",
+            "lname": "Nasir",
+            "age": 20,
+            "spicyFood": true
+        },
+        {
+            "fname": "Farrukh",
+            "lname": "Ahmad",
+            "age": 23,
+            "spicyFood": false
+        },
+        {
+            "fname": "Zeeshan",
+            "lname": "Ali",
+            "age": 25,
+            "spicyFood": false
+        }
+    ]
+
+}

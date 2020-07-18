@@ -89,12 +89,12 @@
 // var operation = makeMultiplier(3);
 // console.log(operation(20));
 
-
+// ChangeText Function
 function changeText() {
     var x = document.getElementById("para");
     // console.log(x.innerText);
     if (x.innerText = "Farrukh Ahmad") {
-        x.innerText = x.innerText + " Nasir";
+        x.innerHTML = "<h2>" + x.innerText + " Nasir!</h2>";
     }
     // console.log(x.innerText);
     x.style.textAlign = "center";
@@ -104,10 +104,10 @@ function changeText() {
         x.style.display = "none";
     }
 }
-
+// GetDate Function
 function getDate() {
     var x = document.getElementById("date");
-    var months = [
+    var months = [ // array
         "January",
         "February",
         "March",
@@ -123,7 +123,52 @@ function getDate() {
     ]
     var d = new Date();
     x.innerText = d.getDate() + " " + months[d.getMonth()] + ", " + d.getFullYear();
+    var y = document.getElementById("btn_date");
+    if (x.style.display == "block") {
+        x.style.display = "none";
+        y.textContent = "Show Date";
+    } else {
+        x.style.display = "block";
+        y.textContent = "Hide Date";
+    }
 }
+// Counter Fucntion
+var add = (function () {
+    var counter = 0;
+    return function () {
+        return counter = counter + 1;
+    }
+})();
+
+function myFunc() {
+    var count = document.getElementById("counter");
+    count.innerText = add();
+}
+
+function myFunc1() {
+    var txt = document.getElementById("counter");
+    txt.innerText += " Times";
+    // console.log(this);    // Pointing towards button not window object  
+    // txt.style.borderBottom = "3px solid red";
+}
+
+
+
+// ------------------ EVENT HANDLERS Outside HTML ---------------------------------
+
+//For Changin Text
+document.getElementById("btn_txt").addEventListener("click", changeText);
+
+//For Date Button
+document.getElementById("btn_date").addEventListener("click", getDate);
+
+//For Counter Button
+document.getElementById("btn_counter").addEventListener("click", myFunc);
+document.getElementById("btn_counter").addEventListener("click", myFunc1);
+
+// document.getElementById("btn_counter").onclick = myFunc;
+
+// ----------------------------------------------------
 
 // ----------------------------------------------------
 
@@ -160,15 +205,15 @@ function getDate() {
 
 // // ************************************
 
-// function chk(x) {
+// var num = (function (x) {
 
 //     var y = function () {
 //         return x * x;
 //     }
 //     return y;
-// }
+// })(5);
 
-// var num = chk(10);
+// // var num = chk(10);
 
 // console.log(num());
 
@@ -193,24 +238,33 @@ function getDate() {
 // var obj = {
 //     name: "Farrukh",
 //     age: 23,
+//     innerObject: { // object
+//         Mname: "Ahmad",
+//         Lanme: "Nasir"
+//     }
 // }
-
 // for (var x in obj) { // traverse properties of objects 
 //     console.log(x + ": " + obj[x]); // x is property name. obj[x] is value of property
 // }
+
+
+
+// --------------------------- Array and object in arrays as values
 
 // var arr = [
 //     "Farrukh",
 //     "Ahmad",
 //     {
-//         Lname: "Nasir",
+//         Lname: "Nasir Ahmad",
 //     }
 // ]
 
 // for (var y of arr) { // traverse values of arrays/ strings/ iterables
-//     console.log("Hello " + y);
+//     console.log(y); // y.Lname to show object present in array
 // }
 
+
+//---------------------------------------------------------------
 // var str = "java script";
 // for (var z of str) {
 //     console.log(z);

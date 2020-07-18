@@ -1,3 +1,13 @@
 body {
     font-family: Montserrat;
+    background-color: #d8d8d8;
+    padding: 15px;
+}
+
+#list li:nth-child(even) {
+    background-color: rgb(182, 182, 182);
+}
+
+span {
+    font: 1.3em bold;
 }
