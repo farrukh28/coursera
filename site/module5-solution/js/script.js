@@ -74,7 +74,7 @@ function insertingContent(UrlHTML, selector) {
 
     showLoading(selector);
 
-    var xhr = new XMLHttpRequest;
+    var xhr = new XMLHttpsRequest;
 
     xhr.open("GET", UrlHTML, true);
 
@@ -124,7 +124,7 @@ function insertCategory(selector, categoryTitle, categoryHTML, allCategoryURL) {
     var finalHTML = "";
 
     // Get Category Title
-    var xhr = new XMLHttpRequest;
+    var xhr = new XMLHttpsRequest;
     xhr.open("GET", categoryTitle, false);
     xhr.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -136,7 +136,7 @@ function insertCategory(selector, categoryTitle, categoryHTML, allCategoryURL) {
     xhr.send();
 
     // Get Category HTML
-    var xhr1 = new XMLHttpRequest;
+    var xhr1 = new XMLHttpsRequest;
     xhr1.open("GET", categoryHTML, false);
     xhr1.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -148,7 +148,7 @@ function insertCategory(selector, categoryTitle, categoryHTML, allCategoryURL) {
     xhr1.send();
 
     // Get All Categories From URL
-    var xhr2 = new XMLHttpRequest;
+    var xhr2 = new XMLHttpsRequest;
     xhr2.open("GET", allCategoryURL, false);
     xhr2.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -213,7 +213,7 @@ function loadMenuItems(short_name, name, special_instructions) {
     var menuHTML = "snippets/menu-items.html"
 
     // Getting and Replacing Values in Menu Title
-    var xhr = new XMLHttpRequest;
+    var xhr = new XMLHttpsRequest;
     xhr.open("GET", menuTitle, false);
     xhr.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -232,7 +232,7 @@ function loadMenuItems(short_name, name, special_instructions) {
     var strHTML = "";
 
     // Getting in Menu HTML
-    var xhr1 = new XMLHttpRequest;
+    var xhr1 = new XMLHttpsRequest;
     xhr1.open("GET", menuHTML, false);
     xhr1.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -247,7 +247,7 @@ function loadMenuItems(short_name, name, special_instructions) {
     menusURL += short_name;
 
     //Getting All Menus from URL
-    var xhr2 = new XMLHttpRequest;
+    var xhr2 = new XMLHttpsRequest;
     xhr2.open("GET", menusURL, false);
     xhr2.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -302,7 +302,7 @@ function chooseRandomCategory(categories) {
 // Load Single Menu Items
 function loadSingleMenuItems() {
     var url = "https://davids-restaurant.herokuapp.com/categories.json";
-    var xhr = new XMLHttpRequest;
+    var xhr = new XMLHttpsRequest;
     xhr.open("GET", url, false);
     xhr.onload = function () {
         var obj = JSON.parse(this.responseText);
