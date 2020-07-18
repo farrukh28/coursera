@@ -51,7 +51,7 @@ function showMenu() {
     var selector = "main-content";
     var categoryTitle = "snippets/menu-categories-title.html";
     var categoryHTML = "snippets/categories-snippet.html";
-    var allCategoryURL = "https://davids-restaurant.herokuapp.com/categories.json";
+    var allCategoryURL = "http://davids-restaurant.herokuapp.com/categories.json";
     insertCategory(selector, categoryTitle, categoryHTML, allCategoryURL);
 }
 
@@ -243,7 +243,7 @@ function loadMenuItems(short_name, name, special_instructions) {
     }
     xhr1.send();
 
-    var menusURL = "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
+    var menusURL = "http://davids-restaurant.herokuapp.com/menu_items.json?category=";
     menusURL += short_name;
 
     //Getting All Menus from URL
@@ -301,7 +301,7 @@ function chooseRandomCategory(categories) {
 
 // Load Single Menu Items
 function loadSingleMenuItems() {
-    var url = "https://davids-restaurant.herokuapp.com/categories.json";
+    var url = "http://davids-restaurant.herokuapp.com/categories.json";
     var xhr = new XMLHttpRequest;
     xhr.open("GET", url, false);
     xhr.onload = function () {
